@@ -6,6 +6,7 @@ This is the comment section, used to add info outside the code
  
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Github Hub</title>
         <!-- [if lt IE 9]>
@@ -20,31 +21,38 @@ This is the comment section, used to add info outside the code
        
         The script above handles HTML5 tags for older browsers than 9, that is what the code tells it.
         -->
-		<link rel="stylesheet" href="css/site.css" />
+		<link rel="stylesheet" href="CSS/CSS.css" />
 
     </head>
+
     <body>
 		<div class="container">
 		<header>
 		    <nav>
 				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="/contact.html">Contact</a></li>
-					<li><a href="/about.html">About</a></li>
+                    <li><a href="/index.html">Home</a>
+                    </li>
+                    <li><a href="/contact.html">Contact</a>
+                    </li>
+                    <li><a href="/about.html">About</a>
+                    </li>
 				</ul>
 			</nav>
             <div>
-			<img src="images/logo.gif" class="bordered-image" />
+			<img src="Images\logo.png" class="bordered-image" />
 			</div>
             <div>This is a site to search <a href="www.google.com">Github</a> for interesting projects.</div>
         </header>
         <section id="main">
-            <p><strong>Lorem ipsum</strong><em> dolor sit amet First italic,</em><i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore <b>magna aliqua.</b> Ut enim ad minim veniam, quis nostrud <span>exercitation ullamco</span> laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <form action="http://yoursite.com/echo" method="POST" class="bordered-image simple-form" id="gitHubSearchForm">
+            <p><strong>Lorem ipsum</strong>
+                <em> dolor sit amet First italic,</em><i>consectetur adipiscing elit,</i> sed do eiusmod tempor incididunt ut labore et dolore <b>magna aliqua.</b> Ut enim ad minim veniam, quis nostrud <span>exercitation ullamco</span> laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <form action="http://wilder.azurewebsites.net/echo" method="POST" class="bordered-image simple-form" id="gitHubSearchForm">
                 <label for="searchPhrase">Search Phrase:</label>
-                <input type="text" name="searchPhrase" id="searchPhrase" /></br>
+                <input type="text" name="searchPhrase" id="searchPhrase" />
+            <br/>
                 <input type="checkbox" name="useStars" id="useStars" checked="true" />
-                <label for="useStars" Use stars?</label></br>
+                <label for="useStars">Use stars?</label>
+            <br/>
                 <label for="langChoice">Language: </label>
                 <select name="langChoice" id="langChoice">
                     <option>All</option>
@@ -52,11 +60,11 @@ This is the comment section, used to add info outside the code
                     <option selected>C#</option>
                     <option>Java</option>
                     <option>Ruby</option>
-                </seelct>
-                </be>
-                <input type="submit" value="search" /></br>
+                </select>
+                <br/>
+                <input type="submit" value="search" />
             </form>
-			<div id="results" class="border-image">
+			<div id="results" class="bordered-image">
 				<button id="toggleButton">Hide</button>
 				<div id="resultList">This is where the results will go</div>
 			</div>
@@ -65,8 +73,8 @@ This is the comment section, used to add info outside the code
             &copy; 2019 Deliberate Practice
         </footer>
 		</div>
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="JS/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="JS/index.js"></script>
     </body>
 	
 </html>

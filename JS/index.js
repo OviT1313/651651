@@ -1,22 +1,22 @@
 /*
 	index.js
 */
-$(document).ready(functino () {
+$(document).ready(function() {
 
 "use strict";
 
-var msg = "hello JavaScript"
-console.log(msg);
+//var msg = "hello JavaScript"
+//console.log(msg);
 			
-var resultsDiv = document.getElementById("results");
-resultsDiv.innerHTML = "<p>This is from JavaSCript</p>"
+//var resultsDiv = document.getElementById("results");
+//resultsDiv.innerHTML = "<p>This is from JavaSCript</p>"
 	
-	var resultList = jQuery("#resultList");
-	resultList.text("This is from jJQuery");
+	var resultList = $("#resultList");
+	resultList.text("This is from jQuery");
 	
 	var toggleButton = $("#toggleButton");
-	toggleButton.on("click", function () {
-		restultList.toggle(500);
+	toggleButton.on("click", function() {
+		resultList.toggle(500);
 		
 		if (toggleButton.text() == "Hide") toggleButton.text("Show");
 		else toggleButton.text("Hide");
@@ -25,7 +25,8 @@ resultsDiv.innerHTML = "<p>This is from JavaSCript</p>"
 	var listItems = $("header nav li");
 	listItems.css("font-weight", "bold");
 	listItems.filter(":first").css("font-size", "18px");
-	
+
+
 // var result = {
 	// name: "jQuery",
 	// language: "JavaScript",
@@ -44,7 +45,7 @@ resultsDiv.innerHTML = "<p>This is from JavaSCript</p>"
 //console.log(results.phoneNumber);
 
 
-$("#gitHubSearchForm").on("submit", function () {
+$("#gitHubSearchForm").on("submit", function() {
 	
 	var searchPhrase = $("#searchPhrase").val();
 	var useStars = $("#useStars").val();
@@ -52,7 +53,7 @@ $("#gitHubSearchForm").on("submit", function () {
 	
 	if (searchPhrase) {
 		
-		resultList.text("Perfrorming search...");
+		resultList.text("Performing search...");
 		
 		var gitHubSearch = "https://api.github.com/search/repositories?q=" + encodeURIComponent(searchPhrase);
 		
@@ -69,10 +70,10 @@ $.get(gitHubSearch)
 	//console.log(r.items.lenght);
 	displayResults(r.items);
 	})
-	.fail(function (err) {
+	.fail(function(err) {
 	console.log("Failed to query GitHub");
 	})
-	.done(function () {
+	.done(function() {
 	//
 	});
 }	
@@ -108,18 +109,18 @@ $.get(gitHubSearch)
 
 function displayResults(results) {
 	resultList.empty();
-$.each(results, function (i, items) {
+$.each(results, function(i, item) {
 	
-	var newResult = "<div class='result'>" +
+	var newResult = $("<div class='result'>" +
 	  "<div class='title'>" + item.name + "</div>" +
-	  "divLanguage: " + item.language + "</div>" +
-	  "<div>Owner: " + item.language + "</div>" +
-	  "</div>";
+	  "div>Language: " + item.language + "</div>" +
+	  "<div>Owner: " + item.owner.login + "</div>" +
+	  "</div>");
 	
-	newResult.hover(function () {
+	newResult.hover(function() {
 		//make it darker
 		$(this).css("background-color", "lightgray");
-	}, function (){
+	}, function() {
 		//reverse
 		$(this).css("background-color", "transparent");
 	});
